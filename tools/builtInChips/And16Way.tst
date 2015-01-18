@@ -1,0 +1,66 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/01/And16Way.tst
+
+load And16Way.hdl,
+output-file And16Way.out,
+compare-to And16Way.cmp,
+output-list a%B3.1.3 b%B3.1.3 c%B3.1.3 d%B3.1.3 e%B3.1.3 f%B3.1.3 g%B3.1.3 h%B3.1.3 i%B3.1.3 j%B3.1.3 k%B3.1.3 l%B3.1.3 m%B3.1.3 n%B3.1.3 o%B3.1.3 p%B3.1.3 out%B3.1.3;
+
+set a 0,
+set b 0,
+set c 0,
+set d 0,
+set e 0,
+set f 0,
+set g 0,
+set h 0,
+set i 0,
+set j 0,
+set k 0,
+set l 0,
+set m 0,
+set n 0,
+set o 0,
+set p 0,
+eval,
+output;
+
+set a 1,
+set b 1,
+set c 1,
+set d 1,
+set e 1,
+set f 1,
+set g 1,
+set h 1,
+set i 1,
+set j 1,
+set k 1,
+set l 1,
+set m 1,
+set n 1,
+set o 1,
+set p 0,
+eval,
+output;
+
+set a 1,
+set b 1,
+set c 1,
+set d 1,
+set e 1,
+set f 1,
+set g 1,
+set h 1,
+set i 1,
+set j 1,
+set k 1,
+set l 1,
+set m 1,
+set n 1,
+set o 1,
+set p 1,
+eval,
+output;

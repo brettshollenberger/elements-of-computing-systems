@@ -1,0 +1,25 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/01/And16Way.hdl
+
+ /**
+ * And16Way gate: 
+ * out = 1 if (a == 1 and b == 1 and c == 1 and d == 1 and
+               e == 1 and f == 1 and g == 1 and h == 1 and
+               i == 1 and j == 1 and k == 1 and l == 1 and
+               m == 1 and n == 1 and o == 1 and p == 1)
+ *       0 otherwise
+ */
+
+CHIP And16Way {
+    IN a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p;
+    OUT out;
+
+    PARTS:
+    And4Way(a=a, b=b, c=c, d=d, out=abcd);
+    And4Way(a=e, b=f, c=g, d=h, out=efgh);
+    And4Way(a=i, b=j, c=k, d=l, out=ijkl);
+    And4Way(a=m, b=n, c=o, d=p, out=mnop);
+    And4Way(a=abcd, b=efgh, c=ijkl, d=mnop, out=out);
+}
